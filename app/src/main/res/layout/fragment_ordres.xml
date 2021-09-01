@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragments.FavoriteFragment">
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="start"
+        android:text="@string/Active"
+        android:textColor="@color/colorTextBlack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvActive"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        tools:listitem="@layout/item_fv" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerActive"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_check_out" />
+
+                <include layout="@layout/shimmer_check_out" />
+
+                <include layout="@layout/shimmer_check_out" />
+
+                <include layout="@layout/shimmer_check_out" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+
+        android:id="@+id/tvComp"
+        android:text="@string/Completed"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+
+        android:textColor="@color/colorTextBlack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvProductCompleted"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvComp"
+        app:layout_constraintTop_toBottomOf="@+id/tvComp"
+        tools:listitem="@layout/item_fv" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerCompleted"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvComp"
+        app:layout_constraintTop_toBottomOf="@+id/tvComp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/shimmer_check_out" />
+
+                <include layout="@layout/shimmer_check_out" />
+
+                <include layout="@layout/shimmer_check_out" />
+
+                <include layout="@layout/shimmer_check_out" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <ImageView
+
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+
+        android:layout_margin="36dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvComp"
+        app:layout_constraintTop_toBottomOf="@+id/tvComp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:src="@drawable/no_item"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        android:id="@+id/no_itemImg"
+        />
+     <TextView
+         android:layout_width="wrap_content"
+         android:text="No items on Completed Orders!"
+         android:textSize="24dp"
+         android:visibility="gone"
+
+         android:id="@+id/tv_no_crt"
+         android:layout_height="wrap_content"
+         app:layout_constraintStart_toStartOf="@id/no_itemImg"
+         app:layout_constraintEnd_toEndOf="@id/no_itemImg"
+         app:layout_constraintTop_toBottomOf="@id/no_itemImg"
+         android:layout_marginTop="16dp"
+
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

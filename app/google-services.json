@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "541573832185",
+    "project_id": "bambooprojects-1956a",
+    "storage_bucket": "bambooprojects-1956a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541573832185:android:b0eebb53104ae370743128",
+        "android_client_info": {
+          "package_name": "com.example.bamboo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "541573832185-tfm3pnk3f9vcequ3h0e2bo4dv2mb4ba0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.bamboo",
+            "certificate_hash": "f800bc448bdade02212fd1befa0fe52893244300"
+          }
+        },
+        {
+          "client_id": "541573832185-3irq84j9pdhs6ls1tdanpbjildhcg5pl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB025HY6FkJeVEKsBIKmPByyiviR7Hjjtc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "541573832185-3irq84j9pdhs6ls1tdanpbjildhcg5pl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
